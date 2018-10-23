@@ -2,6 +2,11 @@ Reproducing
 [lein-cljsbuild#469](https://github.com/emezeske/lein-cljsbuild/issues/469) /
 [CRRBV-15](https://dev.clojure.org/jira/browse/CRRBV-15) with cljs.main.
 
+To reproduce:
+
+* The *Clojure* namespace `clojure.core.rrb-vector.nodes` must be loaded before the ClojureScript code is compiled.
+* AOT cache must be disabled. If you have a succesfully built version in AOT cache, the problem won't occur.
+
 Run this:
 
 ```
